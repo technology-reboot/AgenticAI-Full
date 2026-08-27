@@ -2,18 +2,42 @@ from pathlib import Path
 from statistics import mean
 import os
 
-import chromadb
 from dotenv import load_dotenv
 from langchain_community.document_loaders import TextLoader
-from langchain_community.vectorstores import Chroma
+from langchain_community.vectorstores import FAISS
+from langchain_community.vectorstores.utils import DistanceStrategy
 from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
 REBUILD = False
-PERSIST_DIR = "./chroma_db"
+PERSIST_DIR = "./faiss_index"
 COLLECTION_NAME = "it_companies"
 CORPUS_DIR = Path("data/company_profiles")
+
+
+# normalize_L2=True makes FAISS index unit vectors, so its squared-L2 distance d
+# equals 2 - 2*cos. cosine_relevance maps that back to cosine similarity, keeping the
+# 0.4-0.8 thresholds in this lab on the same scale Chroma's hnsw:space=cosine used.
+STORE_KWARGS = dict(normalize_L2=True, distance_strategy=DistanceStrategy.EUCLIDEAN_DISTANCE)
+
+
+def cosine_relevance(distance):
+    return 1.0 - distance / 2.0
+
+
+def build_store(chunks, embeddings, ids):
+    return FAISS.from_documents(
+        chunks, embeddings, ids=ids, relevance_score_fn=cosine_relevance, **STORE_KWARGS,
+    )
+
+
+def load_store(embeddings):
+    return FAISS.load_local(
+        PERSIST_DIR, embeddings, COLLECTION_NAME, allow_dangerous_deserialization=True,
+        relevance_score_fn=cosine_relevance, **STORE_KWARGS,
+    )
+
 
 PROFILES = {
     "tcs.txt": ("Tata Consultancy Services", "TCS", """Tata Consultancy Services, commonly called TCS, was founded in 1968 and is headquartered in Mumbai. It is part of the Tata Group and has grown into India's largest IT services exporter. K Krithivasan became chief executive officer in June 2023. The company employs approximately 600,000 people across a broad international delivery network.
@@ -174,17 +198,16 @@ def main():
     print(f"Chunks: {len(chunks)}; per company: {counts}; min/mean/max length: {min(lengths)}/{mean(lengths):.1f}/{max(lengths)}")
 
     embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
-    client = chromadb.PersistentClient(path=PERSIST_DIR)
-    existing = next((item for item in client.list_collections() if getattr(item, "name", item) == COLLECTION_NAME), None)
-    if REBUILD and existing:
-        client.delete_collection(COLLECTION_NAME)
-    vectorstore = Chroma(collection_name=COLLECTION_NAME, persist_directory=PERSIST_DIR, embedding_function=embeddings, collection_metadata={"hnsw:space": "cosine"})
-    if vectorstore._collection.count() == 0:
+    index_file = Path(PERSIST_DIR) / f"{COLLECTION_NAME}.faiss"
+    if REBUILD or not index_file.exists():
         ids = [f"{chunk.metadata['company']}_{index:03d}" for index, chunk in enumerate(chunks)]
-        vectorstore.add_documents(chunks, ids=ids)
-    count = vectorstore._collection.count()
+        vectorstore = build_store(chunks, embeddings, ids)
+        vectorstore.save_local(PERSIST_DIR, COLLECTION_NAME)
+    else:
+        vectorstore = load_store(embeddings)
+    count = vectorstore.index.ntotal
     print(f"Collection {COLLECTION_NAME} count after indexing: {count}")
-    assert count == len(chunks), "Collection count does not match chunk count; use REBUILD = True."
+    assert count == len(chunks), "Index count does not match chunk count; use REBUILD = True."
 
     queries = [("Who is the CEO of TCS and when was the company founded?", "in-domain"), ("What is Infosys revenue growth guidance for FY2025?", "in-domain"), ("Compare the founding years of TCS and Infosys", "multi-hop"), ("Which Indian IT company was founded earliest?", "multi-hop"), ("Who won the FIFA World Cup in 2022?", "out-of-domain")]
     print_results(vectorstore, queries)
@@ -199,7 +222,7 @@ def main():
     q5_zero = next((threshold for threshold, values in threshold_counts.items() if values[4] == 0), "never")
     print(f"\nInterpretation: Q5 returns {threshold_counts[0.4][4]} chunks at 0.4 and {threshold_counts[0.8][4]} at 0.8; it first returns zero at {q5_zero}.")
     print(f"\nSummary: {len(chunks)} chunks in {COLLECTION_NAME} at {PERSIST_DIR}; out-of-domain empty threshold: {q5_zero}.")
-    print("Labs 2 and 3 will reuse ./chroma_db.")
+    print("Labs 2 and 3 will reuse ./faiss_index.")
 
 
 if __name__ == "__main__":

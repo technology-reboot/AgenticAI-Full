@@ -1,9 +1,9 @@
 import os
 from pathlib import Path
 
-import chromadb
 from dotenv import load_dotenv
-from langchain_community.vectorstores import Chroma
+from langchain_community.vectorstores import FAISS
+from langchain_community.vectorstores.utils import DistanceStrategy
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
@@ -11,9 +11,18 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 
 
 RUN_ABLATION = True
-PERSIST_DIR = "./chroma_db"
+PERSIST_DIR = "./faiss_index"
 COLLECTION_NAME = "it_companies"
 REFUSAL = "I don't have that information."
+
+
+# Must match how lab1 built the index (see lab1_vector_store.py).
+STORE_KWARGS = dict(normalize_L2=True, distance_strategy=DistanceStrategy.EUCLIDEAN_DISTANCE)
+
+
+def cosine_relevance(distance):
+    return 1.0 - distance / 2.0
+
 
 GROUNDED_PROMPT = ChatPromptTemplate.from_template("""Answer the question using ONLY the information in the context below.
 
@@ -60,11 +69,8 @@ def format_docs(docs):
 
 
 def verify_store():
-    if not Path(PERSIST_DIR).exists():
-        raise SystemExit("Chroma store is missing; run lab1_vector_store.py first.")
-    client = chromadb.PersistentClient(path=PERSIST_DIR)
-    if not any(getattr(item, "name", item) == COLLECTION_NAME for item in client.list_collections()):
-        raise SystemExit("The it_companies collection is missing; run lab1_vector_store.py first.")
+    if not (Path(PERSIST_DIR) / f"{COLLECTION_NAME}.faiss").exists():
+        raise SystemExit("FAISS store is missing; run lab1_vector_store.py first.")
 
 
 def show_retrieval(vectorstore, query):
@@ -80,8 +86,11 @@ def main():
     require_api_key()
     verify_store()
     embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
-    vectorstore = Chroma(collection_name=COLLECTION_NAME, persist_directory=PERSIST_DIR, embedding_function=embeddings, collection_metadata={"hnsw:space": "cosine"})
-    count = vectorstore._collection.count()
+    vectorstore = FAISS.load_local(
+        PERSIST_DIR, embeddings, COLLECTION_NAME, allow_dangerous_deserialization=True,
+        relevance_score_fn=cosine_relevance, **STORE_KWARGS,
+    )
+    count = vectorstore.index.ntotal
     if count == 0:
         raise SystemExit("The it_companies collection is empty; run lab1_vector_store.py first.")
     print(f"Collection {COLLECTION_NAME} count: {count}")
