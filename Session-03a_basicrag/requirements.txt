@@ -1,4 +1,4 @@
-chromadb>=0.5
+faiss-cpu>=1.8
 langchain>=0.3
 langchain-community
 langchain-openai
