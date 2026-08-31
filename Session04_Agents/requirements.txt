@@ -1,0 +1,10 @@
+openai>=1.96.1,<2
+openai-agents==0.2.2
+langchain==0.2.6
+langchain-openai==0.1.14
+langchain-community==0.2.6
+langgraph==0.1.19
+langsmith==0.1.77
+python-dotenv==1.0.1
+requests==2.32.3
+ddgs>=3.9.0
