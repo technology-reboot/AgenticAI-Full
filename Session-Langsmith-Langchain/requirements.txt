@@ -1,0 +1,17 @@
+# Core training dependencies
+matplotlib>=3.8.0
+python-dotenv>=1.0.1
+langchain-core>=0.3.0
+langchain-openai>=0.2.0
+langsmith>=0.1.100
+
+# The original lab referenced these packages; they are kept here for future extension.
+# openai>=1.35.0
+# llm-guard>=0.3.13
+# ragas>=0.1.9
+# langchain>=0.2.6
+# langchain-openai>=0.1.14
+# langchain-community>=0.2.6
+# chromadb>=0.5.3
+# pandas>=2.2.2
+# numpy>=1.26.4
