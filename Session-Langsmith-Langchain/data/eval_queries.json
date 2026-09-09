@@ -1,0 +1,22 @@
+[
+  {"id": 1, "text": "What is the revenue of TCS for Q1 FY2025?", "domain": "in"},
+  {"id": 2, "text": "Who is the CEO of Infosys?", "domain": "in"},
+  {"id": 3, "text": "Where is Wipro headquartered?", "domain": "in"},
+  {"id": 4, "text": "What services does HCL Technologies provide?", "domain": "in"},
+  {"id": 5, "text": "When was Tech Mahindra founded?", "domain": "in"},
+  {"id": 6, "text": "What is Infosys revenue guidance for FY2025?", "domain": "in"},
+  {"id": 7, "text": "List TCS subsidiaries.", "domain": "in"},
+  {"id": 8, "text": "What is Wipro's primary market?", "domain": "in"},
+  {"id": 9, "text": "Which city is HCL Technologies based in?", "domain": "in"},
+  {"id": 10, "text": "What are Tech Mahindra's telecom clients?", "domain": "in"},
+  {"id": 11, "text": "Compare TCS and Infosys founding years.", "domain": "in"},
+  {"id": 12, "text": "What is HCL's recent acquisition?", "domain": "in"},
+  {"id": 13, "text": "Wipro CEO name and tenure.", "domain": "in"},
+  {"id": 14, "text": "TCS employee headcount FY2025.", "domain": "in"},
+  {"id": 15, "text": "Infosys office locations in India.", "domain": "in"},
+  {"id": 16, "text": "What is the GDP of France in 2024?", "domain": "out"},
+  {"id": 17, "text": "Who won the FIFA World Cup 2022?", "domain": "out"},
+  {"id": 18, "text": "Explain quantum computing in simple terms.", "domain": "out"},
+  {"id": 19, "text": "What is the recipe for biryani?", "domain": "out"},
+  {"id": 20, "text": "Latest news about Tesla stock price.", "domain": "out"}
+]
