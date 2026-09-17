@@ -1,0 +1,37 @@
+{
+  "training_data": [
+    {"symbol": "ASSET_A", "asset_class": "equity", "sector": "technology", "return_forecast": 0.12, "volatility": 0.20},
+    {"symbol": "ASSET_B", "asset_class": "bond", "sector": "fixed_income", "return_forecast": 0.06, "volatility": 0.05},
+    {"symbol": "ASSET_C", "asset_class": "commodity", "sector": "gold", "return_forecast": 0.07, "volatility": 0.11},
+    {"symbol": "ASSET_D", "asset_class": "equity", "sector": "financial_services", "return_forecast": 0.10, "volatility": 0.18}
+  ],
+  "rules": {
+    "min_cash_allocation": 5,
+    "max_equity_allocation": 70,
+    "min_sector_diversification": 3,
+    "risk_labels": {
+      "low": "low",
+      "moderate": "moderate",
+      "high": "high"
+    },
+    "disclaimer": "This is educational advisory output and not personalized financial advice. Please consult a qualified financial advisor before investing."
+  },
+  "scenario_defaults": {
+    "rate_hike": {"growth_multiplier": 0.94, "stress_multiplier": 0.88},
+    "market_downturn": {"growth_multiplier": 0.89, "stress_multiplier": 0.79},
+    "inflation": {"growth_multiplier": 0.96, "stress_multiplier": 0.82},
+    "base": {"growth_multiplier": 1.0, "stress_multiplier": 0.92}
+  },
+  "sample_goal": {
+    "name": "House down payment",
+    "target_amount": 3000000,
+    "time_horizon_years": 7,
+    "monthly_contribution": 25000
+  },
+  "sample_risk_responses": {
+    "loss_tolerance_percent": 15,
+    "income_stability": "stable",
+    "investment_experience": "intermediate",
+    "liquidity_need": "medium"
+  }
+}
