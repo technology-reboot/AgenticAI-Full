@@ -1,0 +1,4 @@
+symbol,quantity,current_price,history
+ASSET_A,100,120,"100,105,110,120"
+ASSET_B,50,80,"70,75,78,80"
+ASSET_C,40,60,"50,55,58,60"

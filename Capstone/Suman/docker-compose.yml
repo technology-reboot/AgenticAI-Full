@@ -1,0 +1,11 @@
+services:
+  analyzer:
+    build: .
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - chroma_data:/app/.chroma
+volumes:
+  chroma_data:

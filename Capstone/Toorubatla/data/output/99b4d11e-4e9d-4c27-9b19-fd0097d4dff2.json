@@ -1,0 +1,85 @@
+{
+  "documents": [
+    {
+      "document_id": "9f599050-55a1-4135-8ded-442d6538e1bd",
+      "file_name": "invoice.pdf",
+      "mime_type": "application/pdf",
+      "document_type": "invoice",
+      "extraction_method": "pdf_text",
+      "raw_text": "INVOICE\nVendor: ABC Technologies Pvt Ltd\nInvoice Number: INV-1001\nInvoice Date: 2026-09-01\nPurchase Order Number: PO-5001\nTax: 900\nAmount Due: 5900",
+      "tables": [],
+      "confidence": 0.957,
+      "sha256": "0999cdc05fcdfe8fe5b2ece5422209e12bad563ab7d2b03b38207a96dcde5dff",
+      "page_count": 1,
+      "status": "success",
+      "error": null,
+      "metadata": {
+        "size_bytes": 1513
+      },
+      "ingested_at": "2026-09-11T04:06:33.950592Z"
+    }
+  ],
+  "records": [
+    {
+      "document_id": "9f599050-55a1-4135-8ded-442d6538e1bd",
+      "document_type": "invoice",
+      "vendor_name": {
+        "value": "ABC Technologies Pvt Ltd",
+        "confidence": 0.86
+      },
+      "invoice_number": {
+        "value": "INV-1001",
+        "confidence": 0.86
+      },
+      "po_number": {
+        "value": "PO-5001",
+        "confidence": 0.86
+      },
+      "transaction_date": {
+        "value": "2026-09-01",
+        "confidence": 0.86
+      },
+      "subtotal": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "tax": {
+        "value": 900.0,
+        "confidence": 0.86
+      },
+      "total": {
+        "value": 5900.0,
+        "confidence": 0.86
+      },
+      "currency": {
+        "value": "USD",
+        "confidence": 0.4
+      },
+      "line_items": [],
+      "overall_confidence": 0.823
+    }
+  ],
+  "exceptions": [
+    {
+      "code": "PO_NOT_FOUND",
+      "severity": "high",
+      "document_id": "9f599050-55a1-4135-8ded-442d6538e1bd",
+      "expected": null,
+      "found": "PO-5001",
+      "amount_at_risk": 5900.0,
+      "explanation": "No matching purchase order was found. Expected: None; found: PO-5001. Review the source documents before approval."
+    }
+  ],
+  "decisions": [
+    {
+      "document_id": "9f599050-55a1-4135-8ded-442d6538e1bd",
+      "route": "human_review",
+      "reason": "exceptions: PO_NOT_FOUND",
+      "amount_at_risk": 5900.0,
+      "decided_by": "system"
+    }
+  ],
+  "vendor_emails": [
+    "Subject: Clarification Required for Invoice INV-1001 and PO PO-5001\n\nDear Team,\n\nThis is a draft regarding Invoice INV-1001 from ABC Technologies Pvt Ltd, associated with Purchase Order PO-5001. Please note that this draft requires human approval, and no payment decision has been made at this time.\n\nThere is a high-severity issue identified: No matching purchase order was found for the invoice. The expected purchase order was not found, but PO-5001 was located. Please review the source documents before proceeding with approval.\n\nThank you for your attention to this matter.\n\nBest regards,\n\n[Your Name]"
+  ]
+}

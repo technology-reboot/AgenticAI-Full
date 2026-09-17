@@ -1,0 +1,34 @@
+{
+  "training_data": [
+    {
+      "symbol": "AAPL",
+      "asset_class": "equity",
+      "sector": "technology"
+    },
+    {
+      "symbol": "MSFT",
+      "asset_class": "equity",
+      "sector": "automotive"
+    },
+    {
+      "symbol": "GOOG",
+      "asset_class": "equity",
+      "sector": "technology"
+    },
+    {
+      "symbol": "AMZN",
+      "asset_class": "equity",
+      "sector": "consumer"
+    },
+    {
+      "symbol": "TSLA",
+      "asset_class": "equity",
+      "sector": "automotive"
+    },
+    {
+      "symbol": "JPM",
+      "asset_class": "equity",
+      "sector": "financials"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "invoices": [
+    {
+      "invoice_number": "INV-2024-001",
+      "vendor_name": "Acme Supplies",
+      "invoice_date": "2024-01-15",
+      "due_date": "2024-02-15",
+      "total_amount": 1250.00,
+      "currency": "USD",
+      "po_number": "PO-2024-010",
+      "status": "pending",
+      "line_items": [
+        {
+          "description": "Office chairs",
+          "quantity": 10,
+          "unit_price": 125.00,
+          "total_price": 1250.00,
+          "sku_or_part_number": "OC-001"
+        }
+      ],
+      "confidence_score": 0.95,
+      "raw_text": "INVOICE\nInvoice #: INV-2024-001\nVendor: Acme Supplies\nDate: 2024-01-15\nDue: 2024-02-15\nTotal: $1,250.00\nPO: PO-2024-010\n\nItem: Office chairs x 10 @ $125.00 each",
+      "errors": [],
+      "tables": []
+    },
+    {
+      "invoice_number": "INV-2024-002",
+      "vendor_name": "TechCorp Industries",
+      "invoice_date": "2024-01-20",
+      "due_date": "2024-02-20",
+      "total_amount": 895.50,
+      "currency": "USD",
+      "po_number": "PO-2024-015",
+      "status": "pending",
+      "line_items": [
+        {
+          "description": "Software licenses",
+          "quantity": 5,
+          "unit_price": 179.10,
+          "total_price": 895.50,
+          "sku_or_part_number": "SL-067"
+        }
+      ],
+      "confidence_score": 0.92,
+      "raw_text": "INVOICE\nInvoice #: INV-2024-002\nVendor: TechCorp Industries\nDate: 2024-01-20\nDue: 2024-02-20\nTotal: $895.50\nPO: PO-2024-015\n\nItem: Software licenses x 5 @ $179.10 each",
+      "errors": [],
+      "tables": []
+    },
+    {
+      "invoice_number": "INV-2024-003",
+      "vendor_name": "Acme Supplies",
+      "invoice_date": "2024-01-25",
+      "due_date": "2024-02-25",
+      "total_amount": 450.00,
+      "currency": "USD",
+      "po_number": "PO-2024-018",
+      "status": "pending",
+      "line_items": [
+        {
+          "description": "Training materials",
+          "quantity": 1,
+          "unit_price": 450.00,
+          "total_price": 450.00,
+          "sku_or_part_number": "TM-012"
+        }
+      ],
+      "confidence_score": 0.88,
+      "raw_text": "INVOICE\nInvoice #: INV-2024-003\nVendor: Acme Supplies\nDate: 2024-01-25\nDue: 2024-02-25\nTotal: $450.00\nPO: PO-2024-018\n\nItem: Training materials - $450.00",
+      "errors": ["Possible OCR artifact: quantity not clearly listed"],
+      "tables": []
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "type": "object",
+  "properties": {
+    "invoice_number": {
+      "type": "string",
+      "description": "Unique invoice identifier"
+    },
+    "vendor_name": {
+      "type": "string",
+      "description": "Name of the vendor"
+    },
+    "invoice_date": {
+      "type": "string",
+      "description": "Invoice date in YYYY-MM-DD format"
+    },
+    "due_date": {
+      "type": "string",
+      "description": "Payment due date in YYYY-MM-DD format"
+    },
+    "total_amount": {
+      "type": "number",
+      "description": "Total invoice amount"
+    },
+    "tax_amount": {
+      "type": "number",
+      "description": "Tax amount"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency code (e.g., USD, EUR)"
+    },
+    "po_number": {
+      "type": "string",
+      "description": " associated Purchase Order number"
+    },
+    "status": {
+      "type": "string",
+      "description": "Processing status"
+    }
+  },
+  "required": ["invoice_number", "vendor_name", "invoice_date", "total_amount"]
+}

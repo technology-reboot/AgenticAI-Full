@@ -1,0 +1,6 @@
+receipt_id,invoice_number,receipt_date,vendor_name,total_amount,currency,po_number
+REC-2024-001,INV-2024-001,2024-01-18,Acme Supplies,1250.00,USD,PO-2024-010
+REC-2024-002,INV-2024-002,2024-01-23,TechCorp Industries,895.50,USD,PO-2024-015
+REC-2024-003,INV-2024-003,2024-01-28,Acme Supplies,450.00,USD,PO-2024-018
+REC-2024-004,INV-2024-004,2024-02-02,Global Logistics,2340.75,USD,PO-2024-022
+REC-2024-005,INV-2024-005,2024-02-08,TechCorp Industries,1580.00,USD,PO-2024-025

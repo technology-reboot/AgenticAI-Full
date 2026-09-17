@@ -1,0 +1,17 @@
+# Intelligent Invoice & Expense Reconciliation Agent - Capstone Project
+# Required third-party dependencies
+
+# PaddlePaddle - for OCR and PDF processing (used in ingestion_agent.py line 13)
+# IMPORTANT: paddle has limited Python 3.12 compatibility.
+# This project was designed for Python 3.8 - 3.11.
+#
+# Options for Python 3.12 users:
+#   1. Install Python 3.11 and use that environment: py -3.11 -m venv .venv
+#   2. Use alternative OCR: pip install pytesseract opencv-python
+#   3. If staying with paddle on Python 3.12:
+#      pip install paddle -i https://pypi.tuna.tsinghua.edu.cn/simple
+#      (may require avoiding certain versions that conflict with kintera)
+paddle>=1.4.0
+
+# Pydantic - for data validation and Pydantic models (used in extraction_agent.py line 14)
+pydantic==2.7.4

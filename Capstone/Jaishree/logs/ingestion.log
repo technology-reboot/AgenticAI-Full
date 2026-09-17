@@ -1,0 +1,1 @@
+2026-09-09 17:01:40,812 INFO ingestion file=invoice.pdf method=ExtractionMethod.pdf_text type=DocumentType.invoice confidence=0.957

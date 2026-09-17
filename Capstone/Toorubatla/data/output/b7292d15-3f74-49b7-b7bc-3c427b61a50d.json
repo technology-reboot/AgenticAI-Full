@@ -1,0 +1,211 @@
+{
+  "documents": [
+    {
+      "document_id": "0a5c0e5c-a08a-4d16-bf88-a0e39104c2a5",
+      "file_name": "purchase_order.pdf",
+      "mime_type": "application/pdf",
+      "document_type": "purchase_order",
+      "extraction_method": "pdf_text",
+      "raw_text": "PURCHASE ORDER\nPO Number: PO-5001\nVendor: ABC Technologies Pvt Ltd\nTax: 900\nTotal: 5900",
+      "tables": [],
+      "confidence": 0.919,
+      "sha256": "03569114ad087547acdb5e2a73a8435a24c1f9f85de47650108792c7d4ca4acf",
+      "page_count": 1,
+      "status": "success",
+      "error": null,
+      "metadata": {
+        "size_bytes": 1461
+      },
+      "ingested_at": "2026-09-10T04:56:30.855120Z"
+    },
+    {
+      "document_id": "3b24a3a6-af96-4d6a-a318-b08ce9d56ca6",
+      "file_name": "purchase_order.pdf",
+      "mime_type": "application/pdf",
+      "document_type": "purchase_order",
+      "extraction_method": "pdf_text",
+      "raw_text": "PURCHASE ORDER\nPO Number: PO-5001\nVendor: ABC Technologies Pvt Ltd\nTax: 900\nTotal: 5900",
+      "tables": [],
+      "confidence": 0.919,
+      "sha256": "03569114ad087547acdb5e2a73a8435a24c1f9f85de47650108792c7d4ca4acf",
+      "page_count": 1,
+      "status": "success",
+      "error": null,
+      "metadata": {
+        "size_bytes": 1461
+      },
+      "ingested_at": "2026-09-10T04:56:30.872120Z"
+    },
+    {
+      "document_id": "291160bb-2485-4602-ae26-f450cae0bbc4",
+      "file_name": "invoice.pdf",
+      "mime_type": "application/pdf",
+      "document_type": "invoice",
+      "extraction_method": "pdf_text",
+      "raw_text": "INVOICE\nVendor: ABC Technologies Pvt Ltd\nInvoice Number: INV-1001\nInvoice Date: 2026-09-01\nPurchase Order Number: PO-5001\nTax: 900\nAmount Due: 5900",
+      "tables": [],
+      "confidence": 0.957,
+      "sha256": "0999cdc05fcdfe8fe5b2ece5422209e12bad563ab7d2b03b38207a96dcde5dff",
+      "page_count": 1,
+      "status": "success",
+      "error": null,
+      "metadata": {
+        "size_bytes": 1513
+      },
+      "ingested_at": "2026-09-10T04:56:30.915659Z"
+    }
+  ],
+  "records": [
+    {
+      "document_id": "0a5c0e5c-a08a-4d16-bf88-a0e39104c2a5",
+      "document_type": "purchase_order",
+      "vendor_name": {
+        "value": "ABC Technologies Pvt Ltd",
+        "confidence": 0.86
+      },
+      "invoice_number": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "po_number": {
+        "value": "PO-5001",
+        "confidence": 0.86
+      },
+      "transaction_date": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "subtotal": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "tax": {
+        "value": 900.0,
+        "confidence": 0.86
+      },
+      "total": {
+        "value": 5900.0,
+        "confidence": 0.86
+      },
+      "currency": {
+        "value": "USD",
+        "confidence": 0.4
+      },
+      "line_items": [],
+      "overall_confidence": 0.79
+    },
+    {
+      "document_id": "3b24a3a6-af96-4d6a-a318-b08ce9d56ca6",
+      "document_type": "purchase_order",
+      "vendor_name": {
+        "value": "ABC Technologies Pvt Ltd",
+        "confidence": 0.86
+      },
+      "invoice_number": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "po_number": {
+        "value": "PO-5001",
+        "confidence": 0.86
+      },
+      "transaction_date": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "subtotal": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "tax": {
+        "value": 900.0,
+        "confidence": 0.86
+      },
+      "total": {
+        "value": 5900.0,
+        "confidence": 0.86
+      },
+      "currency": {
+        "value": "USD",
+        "confidence": 0.4
+      },
+      "line_items": [],
+      "overall_confidence": 0.79
+    },
+    {
+      "document_id": "291160bb-2485-4602-ae26-f450cae0bbc4",
+      "document_type": "invoice",
+      "vendor_name": {
+        "value": "ABC Technologies Pvt Ltd",
+        "confidence": 0.86
+      },
+      "invoice_number": {
+        "value": "INV-1001",
+        "confidence": 0.86
+      },
+      "po_number": {
+        "value": "PO-5001",
+        "confidence": 0.86
+      },
+      "transaction_date": {
+        "value": "2026-09-01",
+        "confidence": 0.86
+      },
+      "subtotal": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "tax": {
+        "value": 900.0,
+        "confidence": 0.86
+      },
+      "total": {
+        "value": 5900.0,
+        "confidence": 0.86
+      },
+      "currency": {
+        "value": "USD",
+        "confidence": 0.4
+      },
+      "line_items": [],
+      "overall_confidence": 0.823
+    }
+  ],
+  "exceptions": [
+    {
+      "code": "RECEIPT_NOT_FOUND",
+      "severity": "medium",
+      "document_id": "291160bb-2485-4602-ae26-f450cae0bbc4",
+      "expected": null,
+      "found": "INV-1001",
+      "amount_at_risk": 5900.0,
+      "explanation": "No goods or service receipt was found. Expected: None; found: INV-1001. Review the source documents before approval."
+    }
+  ],
+  "decisions": [
+    {
+      "document_id": "0a5c0e5c-a08a-4d16-bf88-a0e39104c2a5",
+      "route": "human_review",
+      "reason": "low extraction confidence",
+      "amount_at_risk": 0.0,
+      "decided_by": "system"
+    },
+    {
+      "document_id": "3b24a3a6-af96-4d6a-a318-b08ce9d56ca6",
+      "route": "human_review",
+      "reason": "low extraction confidence",
+      "amount_at_risk": 0.0,
+      "decided_by": "system"
+    },
+    {
+      "document_id": "291160bb-2485-4602-ae26-f450cae0bbc4",
+      "route": "human_review",
+      "reason": "exceptions: RECEIPT_NOT_FOUND",
+      "amount_at_risk": 5900.0,
+      "decided_by": "system"
+    }
+  ],
+  "vendor_emails": [
+    "Subject: Clarification Required for Invoice INV-1001 and PO-5001\n\nDear Team,\n\nThis is a draft regarding Invoice INV-1001 from ABC Technologies Pvt Ltd, associated with PO-5001. Please note that this draft requires human approval and no payment decision has been made at this time.\n\nThere is a medium severity issue noted: No goods or service receipt was found for this invoice. The amount at risk is $5,900.00. It is essential to review the source documents before proceeding with approval.\n\nThank you for your attention to this matter.\n\nBest regards,\n\n[Your Name]"
+  ]
+}

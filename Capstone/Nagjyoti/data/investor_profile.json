@@ -1,0 +1,15 @@
+{
+  "goal": {
+    "name": "Retirement",
+    "target_amount": 20000000,
+    "time_horizon_years": 20,
+    "monthly_contribution": 25000
+  },
+  "risk_responses": {
+    "risk_appetite": "medium",
+    "loss_tolerance_percent": 20,
+    "income_stability": "stable",
+    "investment_experience": "intermediate",
+    "liquidity_need": "medium"
+  }
+}

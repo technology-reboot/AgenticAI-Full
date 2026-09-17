@@ -1,0 +1,38 @@
+company,period,statement,metric,value,currency,unit,source_file,source_page,fiscal_year_end
+Alpha Ltd,FY2024,P&L,revenue,1000,INR,million,alpha_annual_report.pdf,45,March 31
+Alpha Ltd,FY2024,P&L,gross_profit,400,INR,million,alpha_annual_report.pdf,45,March 31
+Alpha Ltd,FY2024,P&L,operating_income,160,INR,million,alpha_annual_report.pdf,45,March 31
+Alpha Ltd,FY2024,P&L,net_income,100,INR,million,alpha_annual_report.pdf,45,March 31
+Alpha Ltd,FY2024,Balance Sheet,current_assets,500,INR,million,alpha_annual_report.pdf,48,March 31
+Alpha Ltd,FY2024,Balance Sheet,current_liabilities,300,INR,million,alpha_annual_report.pdf,48,March 31
+Alpha Ltd,FY2024,Balance Sheet,cash_and_equivalents,100,INR,million,alpha_annual_report.pdf,48,March 31
+Alpha Ltd,FY2024,Balance Sheet,accounts_receivable,150,INR,million,alpha_annual_report.pdf,48,March 31
+Alpha Ltd,FY2024,Balance Sheet,inventory,120,INR,million,alpha_annual_report.pdf,48,March 31
+Alpha Ltd,FY2024,Balance Sheet,total_assets,1500,INR,million,alpha_annual_report.pdf,48,March 31
+Alpha Ltd,FY2024,Balance Sheet,total_debt,500,INR,million,alpha_annual_report.pdf,48,March 31
+Alpha Ltd,FY2024,Balance Sheet,total_equity,700,INR,million,alpha_annual_report.pdf,48,March 31
+Alpha Ltd,FY2024,P&L,cost_of_goods_sold,600,INR,million,alpha_annual_report.pdf,45,March 31
+Alpha Ltd,FY2024,Cash Flow,operating_cash_flow,130,INR,million,alpha_annual_report.pdf,52,March 31
+Alpha Ltd,FY2025,P&L,revenue,1120,INR,million,alpha_annual_report_2025.pdf,43,March 31
+Alpha Ltd,FY2025,P&L,gross_profit,420,INR,million,alpha_annual_report_2025.pdf,43,March 31
+Alpha Ltd,FY2025,P&L,operating_income,140,INR,million,alpha_annual_report_2025.pdf,43,March 31
+Alpha Ltd,FY2025,P&L,net_income,115,INR,million,alpha_annual_report_2025.pdf,43,March 31
+Alpha Ltd,FY2025,Balance Sheet,current_assets,520,INR,million,alpha_annual_report_2025.pdf,46,March 31
+Alpha Ltd,FY2025,Balance Sheet,current_liabilities,430,INR,million,alpha_annual_report_2025.pdf,46,March 31
+Alpha Ltd,FY2025,Balance Sheet,cash_and_equivalents,80,INR,million,alpha_annual_report_2025.pdf,46,March 31
+Alpha Ltd,FY2025,Balance Sheet,accounts_receivable,210,INR,million,alpha_annual_report_2025.pdf,46,March 31
+Alpha Ltd,FY2025,Balance Sheet,inventory,190,INR,million,alpha_annual_report_2025.pdf,46,March 31
+Alpha Ltd,FY2025,Balance Sheet,total_assets,1700,INR,million,alpha_annual_report_2025.pdf,46,March 31
+Alpha Ltd,FY2025,Balance Sheet,total_debt,850,INR,million,alpha_annual_report_2025.pdf,46,March 31
+Alpha Ltd,FY2025,Balance Sheet,total_equity,720,INR,million,alpha_annual_report_2025.pdf,46,March 31
+Alpha Ltd,FY2025,P&L,cost_of_goods_sold,700,INR,million,alpha_annual_report_2025.pdf,43,March 31
+Alpha Ltd,FY2025,Cash Flow,operating_cash_flow,70,INR,million,alpha_annual_report_2025.pdf,50,March 31
+Beta Inc,FY2025,P&L,revenue,1250,USD,million,beta_report.pdf,30,December 31
+Beta Inc,FY2025,P&L,gross_profit,550,USD,million,beta_report.pdf,30,December 31
+Beta Inc,FY2025,P&L,operating_income,225,USD,million,beta_report.pdf,30,December 31
+Beta Inc,FY2025,P&L,net_income,150,USD,million,beta_report.pdf,30,December 31
+Beta Inc,FY2025,Balance Sheet,current_assets,600,USD,million,beta_report.pdf,33,December 31
+Beta Inc,FY2025,Balance Sheet,current_liabilities,300,USD,million,beta_report.pdf,33,December 31
+Beta Inc,FY2025,Balance Sheet,total_assets,1800,USD,million,beta_report.pdf,33,December 31
+Beta Inc,FY2025,Balance Sheet,total_debt,450,USD,million,beta_report.pdf,33,December 31
+Beta Inc,FY2025,Balance Sheet,total_equity,900,USD,million,beta_report.pdf,33,December 31

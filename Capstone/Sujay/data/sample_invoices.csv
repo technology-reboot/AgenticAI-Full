@@ -1,0 +1,6 @@
+invoice_number,vendor_name,invoice_date,due_date,total_amount,currency,po_number,status
+INV-2024-001,Acme Supplies,2024-01-15,2024-02-15,1250.00,USD,PO-2024-010,pending
+INV-2024-002,TechCorp Industries,2024-01-20,2024-02-20,895.50,USD,PO-2024-015,pending
+INV-2024-003,Acme Supplies,2024-01-25,2024-02-25,450.00,USD,PO-2024-018,pending
+INV-2024-004,Global Logistics,2024-02-01,2024-03-01,2340.75,USD,PO-2024-022,pending
+INV-2024-005,TechCorp Industries,2024-02-05,2024-03-05,1580.00,USD,PO-2024-025,pending

@@ -1,0 +1,4 @@
+transaction_date,description,debit,credit,balance
+2026-09-02,Invoice INV-1001 Payment,,5900,25000
+2026-09-03,Office Supplies,250,,24750
+2026-09-03,Office Supplies,250,,24750

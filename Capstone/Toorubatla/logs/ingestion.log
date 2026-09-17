@@ -1,0 +1,31 @@
+2026-09-10 04:20:44,546 INFO ingestion file=bank_statement.csv method=ExtractionMethod.csv type=DocumentType.bank_statement confidence=0.983
+2026-09-10 04:20:44,578 INFO ingestion file=invoice.pdf method=ExtractionMethod.pdf_text type=DocumentType.invoice confidence=0.957
+2026-09-10 04:20:44,593 INFO ingestion file=purchase_order.pdf method=ExtractionMethod.pdf_text type=DocumentType.purchase_order confidence=0.919
+2026-09-10 04:20:52,144 INFO httpx2 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 04:22:15,861 INFO ingestion file=invoice.pdf method=ExtractionMethod.pdf_text type=DocumentType.invoice confidence=0.957
+2026-09-10 04:22:17,457 INFO ingestion file=invoice.pdf method=ExtractionMethod.pdf_text type=DocumentType.invoice confidence=0.957
+2026-09-10 04:22:18,825 INFO ingestion file=invoice.pdf method=ExtractionMethod.pdf_text type=DocumentType.invoice confidence=0.957
+2026-09-10 04:22:19,148 INFO httpx2 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 04:22:23,087 INFO httpx2 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 04:22:23,200 INFO httpx2 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 04:37:23,902 INFO ingestion file=purchase_order.pdf method=ExtractionMethod.pdf_text type=DocumentType.purchase_order confidence=0.919
+2026-09-10 04:37:58,483 INFO ingestion file=purchase_order.pdf method=ExtractionMethod.pdf_text type=DocumentType.purchase_order confidence=0.919
+2026-09-10 04:37:58,500 INFO ingestion file=purchase_order.pdf method=ExtractionMethod.pdf_text type=DocumentType.purchase_order confidence=0.919
+2026-09-10 04:38:13,127 INFO ingestion file=purchase_order.pdf method=ExtractionMethod.pdf_text type=DocumentType.purchase_order confidence=0.919
+2026-09-10 04:38:13,149 INFO ingestion file=purchase_order.pdf method=ExtractionMethod.pdf_text type=DocumentType.purchase_order confidence=0.919
+2026-09-10 04:38:13,177 INFO ingestion file=invoice.pdf method=ExtractionMethod.pdf_text type=DocumentType.invoice confidence=0.957
+2026-09-10 04:38:16,686 INFO httpx2 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 04:56:30,855 INFO ingestion file=purchase_order.pdf method=ExtractionMethod.pdf_text type=DocumentType.purchase_order confidence=0.919
+2026-09-10 04:56:30,872 INFO ingestion file=purchase_order.pdf method=ExtractionMethod.pdf_text type=DocumentType.purchase_order confidence=0.919
+2026-09-10 04:56:30,915 INFO ingestion file=invoice.pdf method=ExtractionMethod.pdf_text type=DocumentType.invoice confidence=0.957
+2026-09-10 04:56:33,443 INFO ingestion file=purchase_order.pdf method=ExtractionMethod.pdf_text type=DocumentType.purchase_order confidence=0.919
+2026-09-10 04:56:33,451 INFO ingestion file=purchase_order.pdf method=ExtractionMethod.pdf_text type=DocumentType.purchase_order confidence=0.919
+2026-09-10 04:56:33,464 INFO ingestion file=invoice.pdf method=ExtractionMethod.pdf_text type=DocumentType.invoice confidence=0.957
+2026-09-10 04:56:34,041 INFO httpx2 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 04:56:35,823 INFO httpx2 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 04:56:51,395 INFO ingestion file=invoice.pdf method=ExtractionMethod.pdf_text type=DocumentType.invoice confidence=0.957
+2026-09-10 04:56:54,763 INFO httpx2 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 05:09:18,334 INFO ingestion file=invoice.pdf method=ExtractionMethod.pdf_text type=DocumentType.invoice confidence=0.957
+2026-09-10 05:09:22,966 INFO httpx2 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 04:06:33,950 INFO ingestion file=invoice.pdf method=ExtractionMethod.pdf_text type=DocumentType.invoice confidence=0.957
+2026-09-11 04:06:42,440 INFO httpx2 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"

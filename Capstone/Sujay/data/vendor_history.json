@@ -1,0 +1,16 @@
+{
+  "Acme Supplies": [
+    {"invoice_number": "INV-2024-001", "total_amount": 1250.00, "invoice_date": "2024-01-15"},
+    {"invoice_number": "INV-2024-003", "total_amount": 450.00, "invoice_date": "2024-01-25"},
+    {"invoice_number": "INV-2024-006", "total_amount": 500.00, "invoice_date": "2024-01-30"}
+  ],
+  "TechCorp Industries": [
+    {"invoice_number": "INV-2024-002", "total_amount": 895.50, "invoice_date": "2024-01-20"},
+    {"invoice_number": "INV-2024-005", "total_amount": 1580.00, "invoice_date": "2024-02-05"},
+    {"invoice_number": "INV-2024-007", "total_amount": 950.00, "invoice_date": "2024-02-10"}
+  ],
+  "Global Logistics": [
+    {"invoice_number": "INV-2024-004", "total_amount": 2340.75, "invoice_date": "2024-02-01"},
+    {"invoice_number": "INV-2024-008", "total_amount": 1800.00, "invoice_date": "2024-02-05"}
+  ]
+}

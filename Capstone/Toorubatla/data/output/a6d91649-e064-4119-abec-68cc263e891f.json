@@ -1,0 +1,136 @@
+{
+  "documents": [
+    {
+      "document_id": "0ae15de4-394b-4829-914f-73c1619b798f",
+      "file_name": "purchase_order.pdf",
+      "mime_type": "application/pdf",
+      "document_type": "purchase_order",
+      "extraction_method": "pdf_text",
+      "raw_text": "PURCHASE ORDER\nPO Number: PO-5001\nVendor: ABC Technologies Pvt Ltd\nTax: 900\nTotal: 5900",
+      "tables": [],
+      "confidence": 0.919,
+      "sha256": "03569114ad087547acdb5e2a73a8435a24c1f9f85de47650108792c7d4ca4acf",
+      "page_count": 1,
+      "status": "success",
+      "error": null,
+      "metadata": {
+        "size_bytes": 1461
+      },
+      "ingested_at": "2026-09-10T04:37:58.483258Z"
+    },
+    {
+      "document_id": "792f056d-50c3-4879-89bd-37bc1c0d15c2",
+      "file_name": "purchase_order.pdf",
+      "mime_type": "application/pdf",
+      "document_type": "purchase_order",
+      "extraction_method": "pdf_text",
+      "raw_text": "PURCHASE ORDER\nPO Number: PO-5001\nVendor: ABC Technologies Pvt Ltd\nTax: 900\nTotal: 5900",
+      "tables": [],
+      "confidence": 0.919,
+      "sha256": "03569114ad087547acdb5e2a73a8435a24c1f9f85de47650108792c7d4ca4acf",
+      "page_count": 1,
+      "status": "success",
+      "error": null,
+      "metadata": {
+        "size_bytes": 1461
+      },
+      "ingested_at": "2026-09-10T04:37:58.500258Z"
+    }
+  ],
+  "records": [
+    {
+      "document_id": "0ae15de4-394b-4829-914f-73c1619b798f",
+      "document_type": "purchase_order",
+      "vendor_name": {
+        "value": "ABC Technologies Pvt Ltd",
+        "confidence": 0.86
+      },
+      "invoice_number": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "po_number": {
+        "value": "PO-5001",
+        "confidence": 0.86
+      },
+      "transaction_date": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "subtotal": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "tax": {
+        "value": 900.0,
+        "confidence": 0.86
+      },
+      "total": {
+        "value": 5900.0,
+        "confidence": 0.86
+      },
+      "currency": {
+        "value": "USD",
+        "confidence": 0.4
+      },
+      "line_items": [],
+      "overall_confidence": 0.79
+    },
+    {
+      "document_id": "792f056d-50c3-4879-89bd-37bc1c0d15c2",
+      "document_type": "purchase_order",
+      "vendor_name": {
+        "value": "ABC Technologies Pvt Ltd",
+        "confidence": 0.86
+      },
+      "invoice_number": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "po_number": {
+        "value": "PO-5001",
+        "confidence": 0.86
+      },
+      "transaction_date": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "subtotal": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "tax": {
+        "value": 900.0,
+        "confidence": 0.86
+      },
+      "total": {
+        "value": 5900.0,
+        "confidence": 0.86
+      },
+      "currency": {
+        "value": "USD",
+        "confidence": 0.4
+      },
+      "line_items": [],
+      "overall_confidence": 0.79
+    }
+  ],
+  "exceptions": [],
+  "decisions": [
+    {
+      "document_id": "0ae15de4-394b-4829-914f-73c1619b798f",
+      "route": "human_review",
+      "reason": "low extraction confidence",
+      "amount_at_risk": 0.0,
+      "decided_by": "system"
+    },
+    {
+      "document_id": "792f056d-50c3-4879-89bd-37bc1c0d15c2",
+      "route": "human_review",
+      "reason": "low extraction confidence",
+      "amount_at_risk": 0.0,
+      "decided_by": "system"
+    }
+  ],
+  "vendor_emails": []
+}

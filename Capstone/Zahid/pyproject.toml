@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portfolio-advisor-agent"
+version = "0.1.0"
+description = "Grounded personalized portfolio advice with what-if simulation"
+requires-python = ">=3.10"
+dependencies = [
+	"python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+ai = ["langchain-openai>=0.3"]
+market = ["yfinance>=0.2"]
+ui = ["streamlit>=1.40"]
+full = ["portfolio-advisor-agent[test,ai,market,ui]"]
+
+[project.scripts]
+portfolio-advisor = "advisory_agent.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["advisory_agent*", "agents*", "services*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
